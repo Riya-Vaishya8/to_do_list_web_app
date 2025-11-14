@@ -1,5 +1,12 @@
 # To-Do List Web App
 
+**Author:** Riya Rajkumar Vaishya  
+**Date:** 13 November 2025
+
+---
+
+## 🌐 Overview
+
 A simple, clean, and responsive To-Do List web application built using **HTML, CSS, and Vanilla JavaScript**.  
 It allows users to add tasks, set due dates, mark tasks as completed, delete tasks, and stores everything in **Local Storage** so data stays even after refreshing the page.
 
