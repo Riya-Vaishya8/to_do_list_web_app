@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #5fd3f3, #7a52ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 420px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#taskInput,
+#dateInput {
+    padding: 10px 12px;
+    height: 44px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+#taskInput {
+    flex: 1;
+    min-width: 120px;
+}
+
+#dateInput {
+    width: 150px;
+}
+
+#addBtn {
+    height: 44px;
+    padding: 0 16px;
+    background: #7a52ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+#addBtn:hover {
+    background: #5a3ed1;
+}
+
+#taskList {
+    margin-top: 25px;
+    list-style: none;
+}
+
+.task {
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s;
+    animation: slideIn 0.25s ease-out;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    background: #d8ffd8;
+}
+
+.task-date {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.btn-group button {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.complete-btn {
+    background: #4cdf64;
+    color: #fff;
+}
+
+.delete-btn {
+    background: #ff4b4b;
+    color: #fff;
+}
+
+.edit-btn {
+    background: #f7c325;
+    color: white;
+}
+
+.edit-input {
+    padding: 6px 8px;
+    border: 2px solid #7a52ff;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Cute Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.task.removing {
+    animation: removeAnim 0.25s forwards ease-in;
+}
+
+@keyframes removeAnim {
+    to {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+}
+
+
+
